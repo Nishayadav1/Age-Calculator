@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #011408;
+    padding: 20px;
+}
+
+.age-calculator-container {
+    background-color: #0b8b06;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%; 
+    max-width: 900px;
+}
+
+.title {
+    background-color: #0d7538;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.content {
+    display: flex;
+    padding: 20px;
+    background-color: #f5f7fa;
+    flex-wrap: wrap;
+}
+
+.image-section {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 1px 5px 8px #045c37;
+}
+
+.dob {
+    background-color: #0d7538;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dob-section, .age-section {
+    background-color: #fff;
+    /* border: 2px solid; */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dob-section div, .age-section div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    width: 4rem;
+}
+
+.icon img {
+    width: 45px;
+}
+
+.text {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.date-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 10px; /* Add margin for smaller screens */
+}
+
+.date-input {
+    width: 90px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.date-value {
+    font-size: 1.5rem;
+}
+
+.date-label {
+    font-size: 1rem;
+    color: black;
+}
+
+button {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #32ce73;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0d7538;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #007bff;
+}
+
+@media (max-width: 768px) {
+    .image-section {
+        padding-right: 1.3rem;
+        height:58vh;
+    }
+    .image-section img{
+        height:68vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        padding: 10px; 
+    }
+
+    .image-section {
+        padding-right: 0; 
+        margin-bottom: 20px;
+        height: 45vh;
+    }
+
+    .image-section img {
+        height: 45vh;
+        border-radius: 8px;
+    }
+
+    .title {
+        font-size: 1.4em;
+    }
+
+    .dob {
+        font-size: 0.9rem;
+        height: auto; 
+        padding: 8px; 
+    }
+
+    .icon img {
+        width: 30px;
+    }
+
+    .date-input {
+        width: 65px;
+        font-size: 0.85rem;
+    }
+
+    .date-value {
+        font-size: 1rem; /* Reduce the date value font size */
+    }
+
+    .date-label {
+        font-size: 0.85rem; /* Adjust label size for readability */
+    }
+
+    .details-section {
+        padding: 0 10px; /* Add padding for better spacing */
+    }
+
+    button {
+        margin-left: 6rem;
+        margin-right: 6rem;
+        padding: 7px 12px; /* Adjust padding for smaller buttons */
+        font-size: 0.85rem; /* Reduce button text size */
+    }
+}
+
